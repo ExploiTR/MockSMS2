@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MockSMS2</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="sender_receiver">Sender / Receiver</string>
+    <string name="inbox">Inbox</string>
+    <string name="sent">Sent</string>
+    <string name="draft">Draft</string>
+    <string name="outbox">Outbox</string>
+    <string name="failed">Failed</string>
+    <string name="queued">Queued</string>
+    <string-array name="sms_type">
+        <item>Inbox</item>
+        <item>Sent</item>
+        <item>Draft</item>
+        <item>Outbox</item>
+        <item>Failed</item>
+        <item>Queued</item>
+    </string-array>
+</resources>
