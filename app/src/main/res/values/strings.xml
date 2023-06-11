@@ -13,12 +13,34 @@
     <string name="outbox">Outbox</string>
     <string name="failed">Failed</string>
     <string name="queued">Queued</string>
-    <string-array name="sms_type">
-        <item>Inbox</item>
-        <item>Sent</item>
-        <item>Draft</item>
-        <item>Outbox</item>
-        <item>Failed</item>
-        <item>Queued</item>
+    <string name="pick_time">Pick</string>
+    <string name="mode_inbox"><![CDATA[Mode > Inbox]]></string>
+    <string name="sms_body">SMS Body</string>
+    <string name="resp">Warning: Misusing the functionality of this app can have serious consequences. Using this app irresponsibly can lead to various negative outcomes, including legal troubles, damage to personal relationships, and potential harm to others. It is important to understand the potential consequences and exercise caution before engaging in such activities using "MockSMS". Please be aware that I take no responsibility for any negative outcomes resulting from the misuse of the app. Remember to use technology responsibly and consider the ethical implications of your actions. If you have any doubts or concerns, it is always advisable to seek legal or professional advice. Use the app with caution and at your own risk! Have fun, without causing harm!</string>
+    <string name="set_sms_status_to_read">Set SMS status to \'read\'</string>
+    <string name="set_sms_status_to_seen">Set SMS status to \'seen\'</string>
+    <string name="set_sms_status_to_delivered">Set SMS status to \'delivered\'</string>
+    <string name="select_sim_slot">Select SIM Slot \(\0\-\9\)</string>
+    <string name="sim_slot_guide">SIM Slot is 0 based index, put 0 for SIM 1 and 9 for 10th SIM (pretty hypothetical). Default is 0 - SIM 1</string>
+    <string name="_0">0</string>
+    <string name="enter_sim_imsi">Enter SIM IMSI</string>
+    <string name="enable_replies_reply_path_preset">Enable replies (reply_path_preset)</string>
+    <string name="persistent_settings_auto_save">Persistent Settings (auto-save)</string>
+    <string name="default_is_auto_generated">Default is auto-generated number, not necessary.</string>
+    <string name="enter_service_center_number">Enter Service Center Number</string>
+    <string name="time_diff_hint">Time difference (minute) is added to the creation time and set as receiving time, default 0.</string>
+    <string name="enter_time_difference">Enter Time Difference</string>
+    <string name="status_hint_sent">SMS Status for Sent Messages, behaviour is subjected to factors.</string>
+    <string name="enable_status_settings">Enable Status Settings</string>
+    <string name="enable_sim_slot_settings">Enable SIM Slot settings</string>
+    <string name="enable_time_difference_settings">Enable Time Difference Settings</string>
+    <string name="enable_service_center_settings">Enable Service Center Settings</string>
+    <string name="enable_imsi_settings">Enable IMSI Settings</string>
+    <string-array name="status_entries">
+        <item>Status NONE</item>
+        <item>Status COMPLETE</item>
+        <item>Status PENDING</item>
+        <item>Status FAILED</item>
     </string-array>
+
 </resources>
