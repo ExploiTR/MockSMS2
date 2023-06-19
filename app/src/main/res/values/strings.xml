@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">MockSMS2</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="first_fragment_label">MockSMS-2</string>
+    <string name="second_fragment_label">Configuration</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="sender_receiver">Sender / Receiver</string>
+    <string name="sender_receiver">Sender / Receiver (with Country Code)</string>
     <string name="inbox">Inbox</string>
     <string name="sent">Sent</string>
     <string name="draft">Draft</string>
@@ -24,7 +23,7 @@
     <string name="sim_slot_guide">SIM Slot is 0 based index, put 0 for SIM 1 and 9 for 10th SIM (pretty hypothetical). Default is 0 - SIM 1</string>
     <string name="_0">0</string>
     <string name="enter_sim_imsi">Enter SIM IMSI</string>
-    <string name="enable_replies_reply_path_preset">Enable replies (reply_path_preset)</string>
+    <string name="enable_replies_reply_path_preset">Enable replies (reply_path_present)</string>
     <string name="persistent_settings_auto_save">Persistent Settings (auto-save)</string>
     <string name="default_is_auto_generated">Default is auto-generated number, not necessary.</string>
     <string name="enter_service_center_number">Enter Service Center Number</string>
@@ -36,6 +35,9 @@
     <string name="enable_time_difference_settings">Enable Time Difference Settings</string>
     <string name="enable_service_center_settings">Enable Service Center Settings</string>
     <string name="enable_imsi_settings">Enable IMSI Settings</string>
+    <string name="save_sms">Save</string>
+    <string name="set_default">Default</string>
+    <string name="genuine_sms_received">Genuine SMS received and saved to SMS database, switch to actual SMS app to view it. (Might take few minutes to be visible)</string>
     <string-array name="status_entries">
         <item>Status NONE</item>
         <item>Status COMPLETE</item>

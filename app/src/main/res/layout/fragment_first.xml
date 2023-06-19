@@ -1,177 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="8dp"
     tools:context=".ui.fragments.FirstFragment">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/phone_text_input_layout"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:hint="@string/sender_receiver"
-        app:counterEnabled="true"
-        app:counterMaxLength="13"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        tools:context=".ui.fragments.FirstFragment">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/phone_text_input_edit_text"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_text_input_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:maxLength="13" />
+            android:layout_marginBottom="4dp"
+            android:hint="@string/sender_receiver"
+            app:counterEnabled="true"
+            app:counterMaxLength="13"
+            app:endIconDrawable="@drawable/pick_contact"
+            app:endIconMode="custom"
+            app:endIconTint="@color/secondary_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_text_input_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:maxLength="13" />
 
-    <com.google.android.material.button.MaterialButtonToggleGroup
-        android:id="@+id/modeSelectGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:checkedButton="@+id/inbox_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone_text_input_layout"
-        app:selectionRequired="true"
-        app:singleSelection="true">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/inbox_button"
-            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:icon="@drawable/icon_select_inbox" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/sent_button"
-            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:icon="@drawable/icon_select_sent" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/draft_button"
-            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:icon="@drawable/icon_select_draft" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/outbox_button"
-            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:icon="@drawable/icon_select_outbox" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/failed_button"
-            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:icon="@drawable/icon_select_failed" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/queued_button"
-            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:icon="@drawable/icon_select_queued" />
-    </com.google.android.material.button.MaterialButtonToggleGroup>
-
-    <app.exploitr.mocksms2.addon.CustomDateTimeView
-        android:id="@+id/date_time_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/card_back_color"
-        android:elevation="4dp"
-        android:orientation="vertical"
-        app:cardCornerRadius="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/modeSelectGroup" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/pick_button"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checkable="false"
-        android:text="@string/pick_time"
-        app:icon="@drawable/time_select"
-        app:layout_constraintEnd_toEndOf="@+id/date_time_view"
-        app:layout_constraintStart_toStartOf="@+id/date_time_view"
-        app:layout_constraintTop_toBottomOf="@+id/date_time_view" />
-
-    <app.exploitr.mocksms2.addon.GradientTextView
-        android:id="@+id/hintMode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:fontFamily="@font/montserratr"
-        android:text="@string/mode_inbox"
-        android:textColor="@color/secondary_color"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pick_button"
-        app:layout_constraintEnd_toStartOf="@+id/date_time_view"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/modeSelectGroup" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="@string/sms_body"
-        app:counterEnabled="true"
-        app:counterMaxLength="160"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pick_button">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputEditText"
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/modeSelectGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:maxLength="160"
-            android:minLines="5" />
+            android:layout_marginTop="4dp"
+            app:checkedButton="@+id/inbox_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_text_input_layout"
+            app:selectionRequired="true"
+            app:singleSelection="true">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/inbox_button"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:icon="@drawable/icon_select_inbox" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/warningTextView"
-        android:layout_width="match_parent"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sent_button"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:icon="@drawable/icon_select_sent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/draft_button"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:icon="@drawable/icon_select_draft" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/outbox_button"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:icon="@drawable/icon_select_outbox" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/failed_button"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:icon="@drawable/icon_select_failed" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/queued_button"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:icon="@drawable/icon_select_queued" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <app.exploitr.mocksms2.addon.CustomDateTimeView
+            android:id="@+id/date_time_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/card_back_color"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modeSelectGroup" />
+
+        <app.exploitr.mocksms2.addon.GradientTextView
+            android:id="@+id/hintMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/montserratr"
+            android:text="@string/mode_inbox"
+            android:textColor="@color/secondary_color"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/date_time_view"
+            app:layout_constraintEnd_toStartOf="@+id/date_time_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/date_time_view" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/smsBodyInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/sms_body"
+            app:counterEnabled="true"
+            app:counterMaxLength="160"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date_time_view">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/smsBodyInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:maxLength="160"
+                android:minLines="5" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/set_default_button"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_default"
+            app:icon="@drawable/ic_change_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/smsBodyInputLayout" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/create_sms_button"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_sms"
+            app:icon="@drawable/ic_save"
+            app:layout_constraintBottom_toBottomOf="@+id/set_default_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/set_default_button"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/warningTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserratr"
+            android:gravity="center"
+            android:text="@string/resp"
+            android:textColor="#808080"
+            android:textSize="11sp"
+            app:drawableTopCompat="@drawable/red_warning_drawable"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/create_sms_button"
+            app:layout_constraintVertical_bias="0.2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/montserratr"
-        android:gravity="center"
-        android:text="@string/resp"
-        android:textColor="#808080"
-        android:textSize="11sp"
-        app:drawableTopCompat="@drawable/red_warning_drawable"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputLayout"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:importantForAccessibility="no"
+        app:srcCompat="@drawable/ic_settings" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
