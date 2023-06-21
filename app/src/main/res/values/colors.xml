@@ -18,4 +18,6 @@
     <color name="am_pm_color_end">#28df96</color>
     <color name="date_color_start">#eb84dc</color>
     <color name="date_color_end">#924eba</color>
+    <color name="ic_is_default">#50FF00</color>
+    <color name="ic_is_not_default">#FF0000</color>
 </resources>

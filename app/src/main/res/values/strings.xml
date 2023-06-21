@@ -5,7 +5,7 @@
     <string name="second_fragment_label">Configuration</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="sender_receiver">Sender / Receiver (with Country Code)</string>
+    <string name="sender_receiver">Contact (with + Code)</string>
     <string name="inbox">Inbox</string>
     <string name="sent">Sent</string>
     <string name="draft">Draft</string>
@@ -27,7 +27,7 @@
     <string name="persistent_settings_auto_save">Persistent Settings (auto-save)</string>
     <string name="default_is_auto_generated">Default is auto-generated number, not necessary.</string>
     <string name="enter_service_center_number">Enter Service Center Number</string>
-    <string name="time_diff_hint">Time difference (minute) is added to the creation time and set as receiving time, default 0.</string>
+    <string name="time_diff_hint">Time difference (minute) is added to the creation time and set as receiving time, default 0. Applicable to received SMS.</string>
     <string name="enter_time_difference">Enter Time Difference</string>
     <string name="status_hint_sent">SMS Status for Sent Messages, behaviour is subjected to factors.</string>
     <string name="enable_status_settings">Enable Status Settings</string>
@@ -38,6 +38,7 @@
     <string name="save_sms">Save</string>
     <string name="set_default">Default</string>
     <string name="genuine_sms_received">Genuine SMS received and saved to SMS database, switch to actual SMS app to view it. (Might take few minutes to be visible)</string>
+    <string name="config">Config</string>
     <string-array name="status_entries">
         <item>Status NONE</item>
         <item>Status COMPLETE</item>
