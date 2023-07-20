@@ -7,43 +7,66 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: #f8f8f8;
+  overflow: hidden;
 }
 
 .container {
   text-align: center;
-  padding: 20px;
-  border: 1px solid #ccc;
+  padding: 40px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("background-screenshot.png") center/cover no-repeat;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.app-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 5px;
+  margin-bottom: 20px;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 48px;
   color: #333;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
 p {
-  font-size: 18px;
+  font-size: 20px;
   color: #666;
-  margin: 10px 0;
+  margin-bottom: 30px;
 }
 
 .button-container {
-  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .download-button {
-  display: inline-block;
-  padding: 12px 24px;
-  font-size: 18px;
+  padding: 15px 30px;
+  font-size: 24px;
   color: #fff;
   background-color: #007bff;
   border: none;
   border-radius: 6px;
   text-decoration: none;
   transition: background-color 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .download-button:hover {
