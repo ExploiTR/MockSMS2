@@ -1,0 +1,18 @@
+{
+  "verified": [
+    "com.google.android.apps.messaging",
+    "com.facebook.orca",
+    "com.microsoft.android.smsorganizer",
+    "org.thoughtcrime.securesms",
+    "com.handcent.app.nextsms",
+    "com.microsoft.appmanager",
+    "xyz.klinker.messenger",
+    "com.moez.QKSMS",
+    "com.textra",
+    "rpkandrodev.yaata"
+  ],
+  "fake": [
+    "hacks.exploitr.mockSms",
+    "hacks.exploitr.mockSms2"
+  ]
+}
