@@ -39,6 +39,7 @@
     <string name="set_default">Default</string>
     <string name="genuine_sms_received">Genuine SMS received and saved to SMS database, switch to actual SMS app to view it. (Might take few minutes to be visible)</string>
     <string name="config">Config</string>
+    <string name="calibrate_test_sms">Calibrate Test SMS</string>
     <string-array name="status_entries">
         <item>Status NONE</item>
         <item>Status COMPLETE</item>
